@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static "css/index.css" %}">
+{% endblock css %}
+
+
+{% block content %}
+    <div class="large-9 columns" role="content">
+
+        <article>
+
+            <div class="row">
+                <div class="large-4 columns hide-for-small">
+                    <img src="{% static "img/yana_lova_avatar.jpg" %}" alt="avatar" />
+                    <h6><a href="#">@yana_lova</a></h6>
+                    <div class="time"><a href="{% static "photo.html" %}">17:30</a></div>
+                </div>
+                <div class="large-8 columns centered">
+                    <img src="{% static "img/yana_lova.jpg" %}" /><br />
+                    <h6 class="show-for-small"><a href="#">@bak</a></h6>
+                    <div class="time"><a href="{% static "photo.html" %}">15:30</a></div>
+                </div>
+            </div>
+
+        </article>
+
+        <hr />
+
+        <article>
+
+            <div class="row">
+                <div class="large-4 columns hide-for-small">
+                    <img src="{% static "img/yuraaksenov_avatar.jpg" %}" alt="avatar" />
+                    <h6><a href="#">@who</a></h6>
+                </div>
+                <div class="large-8 columns centered">
+                    <img src="{% static "img/yuraaksenov.jpg" %}" />
+                    <h6 class="show-for-small"><a href="#">@name</a></h6>
+                    <div class="time"><a href="{% static "photo.html" %}">11:00</a></div>
+                </div>
+            </div>
+
+        </article>
+
+        <hr />
+
+        <article>
+
+            <div class="row">
+                <div class="large-4 columns hide-for-small">
+                    <img src="{% static "img/leothqueenava.jpg" %}" alt="avatar" />
+                    <h6 class="show-for-small"><a href="#">@where</a></h6>
+                </div>
+                <div class="large-8 columns centered">
+                    <img src="{% static "img/VpTzf1c4Lf0.jpg" %}" />
+                    <h6 class="show-for-small"><a href="#">@vitaods</a></h6>
+                    <div class="time"><a href="{% static "photo.html" %}">09:09</a></div>
+                </div>
+            </div>
+
+        </article>
+
+        <hr />
+
+        <article>
+
+            <div class="row">
+                <div class="large-4 columns hide-for-small">
+                    <img src="{% static "img/VpTzf1c4Lf0.jpg" %}" alt="avatar" />
+                    <h6><a href="#">@somebody</a></h6>
+                </div>
+                <div class="large-8 columns centered">
+                    <img src="{% static "img/VpTzf1c4Lf0.jpg" %}" />
+                    <h6 class="show-for-small"><a href="#">@nobody</a></h6>
+                    <div class="time"><a href="{% static "photo.html" %}">19:58</a></div>
+                </div>
+            </div>
+
+        </article>
+
+        <hr />
+
+        <article>
+
+            <div class="row">
+                <div class="large-4 columns hide-for-small">
+                    <img src="{% static "img/profile_35307422_75sq_1355919594.jpg" %}" alt="avatar" />
+                    <h6><a href="#">@vitaods</a></h6>
+                </div>
+                <div class="large-8 columns centered">
+                    <img src="{% static "img/444ae54cc2ee11e1aee522000a1e8a5f_6.jpg" %}" />
+                    <h6 class="show-for-small"><a href="#">@vitaods</a></h6>
+                    <div class="time"><a href="{% static "photo.html" %}">11:11</a></div>
+                </div>
+            </div>
+
+        </article>
+
+        <div class="row pagination-row">
+            <div class="large-4 columns hide-for-small"></div>
+            <div class="large-8 columns pagination-centered">
+                <a href="day.html">&larr; 2013-04-01 </a>
+            </div>
+        </div>
+
+    </div>
+{% endblock content %}
