@@ -1,12 +1,41 @@
-{% extends "base.html" %}
 {% load staticfiles %}
 
+<head>
+    <meta charset="utf-8" />
 
-{% block css %}
-    {{ block.super }}
-    <link rel="stylesheet" href="{% static "css/index.css" %}">
-{% endblock css %}
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
 
+    <title>PhotoPlanet - All Photos</title>
+
+    <link rel="stylesheet" href="{% static "css/normalize.css" %}">
+    <link rel="stylesheet" href="{% static "css/app.css" %}">
+
+    <script src="{% static "js/vendor/custom.modernizr.js" %}"></script>
+
+</head>
+
+
+<div class="row">
+    <div class="large-12 columns">
+        <div class="nav-bar right hide-for-small">
+            <ul class="button-group">
+                <li><a href="{% url 'day' %}" class="button">Today</a></li>
+                <li><a href="{% url 'all' %}" class="button">All</a></li>
+                <li><a href="{% url 'about' %}" class="button">About</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}" class="button">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'login' %}" class="button">Login</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        <h1>
+            <a href="/">PhotoPlanet</a>
+            <small>It's awesome.</small></h1>
+        <hr />
+    </div>
+</div>
 
 {% block content %}
     <div class="large-9 columns" role="content">
@@ -109,3 +138,4 @@
 
     </div>
 {% endblock content %}
+

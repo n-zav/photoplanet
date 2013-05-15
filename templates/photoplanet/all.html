@@ -28,7 +28,11 @@
                 <li><a href="{% url 'day' %}" class="button">Today</a></li>
                 <li><a href="{% url 'all' %}" class="button">All</a></li>
                 <li><a href="{% url 'about' %}" class="button">About</a></li>
-                <li><a href="{% url 'login' %}" class="button">Login</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}" class="button">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'login' %}" class="button">Login</a></li>
+                {% endif %}
             </ul>
         </div>
         <h1>
@@ -37,7 +41,6 @@
         <hr />
     </div>
 </div>
-
 <!-- End Nav -->
 
 
@@ -205,7 +208,7 @@
                     <li><a href="day.html">Today</a></li>
                     <li><a href="all.html">All</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="login.html">Login</a></li>
+                    <li><a href="../users/login.html">Login</a></li>
                 </ul>
             </div>
         </div>
